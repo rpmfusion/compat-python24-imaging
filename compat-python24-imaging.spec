@@ -2,10 +2,12 @@
 %define pyver 2.4
 %define py_incdir %{_includedir}/python%{pyver}
 
+%define _default_patch_fuzz 2
+
 Summary:       Python's own image processing library
 Name:          compat-python24-imaging
 Version:       1.1.6
-Release:       2%{?dist}
+Release:       3%{?dist}
 
 License:       BSD
 Group:         System Environment/Libraries
@@ -151,9 +153,11 @@ rm -rf $RPM_BUILD_ROOT
 %files tk -f files.tk
 
 %changelog
-* Sun Aug 10 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info - 1.1.6-2
+* Sun Sep 28 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info - 1.1.6-3
 - rebuild for RPM Fusion
 
+* Sun Aug 10 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info - 1.1.6-2
+- rebuild for RPM Fusion
 
 * Mon Jun 18 2007 Jonathan Steffan <jon a fedoraunity.org> 1.1.6-1
 - Initial build from fc6 srpm
