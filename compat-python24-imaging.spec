@@ -126,7 +126,7 @@ done
 popd
         
 
-%check || :
+%check
 PYTHONPATH=$(ls -1d build/lib.linux*) %{_bindir}/python2.4 selftest.py
 
 %clean
@@ -154,7 +154,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Sun Sep 28 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info - 1.1.6-3
-- rebuild for RPM Fusion
+- add _default_patch_fuzz 2
+- remove || : after check
 
 * Sun Aug 10 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info - 1.1.6-2
 - rebuild for RPM Fusion
