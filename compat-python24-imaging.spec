@@ -7,7 +7,7 @@
 Summary:       Python's own image processing library
 Name:          compat-python24-imaging
 Version:       1.1.6
-Release:       3%{?dist}
+Release:       4%{?dist}
 
 License:       BSD
 Group:         System Environment/Libraries
@@ -153,6 +153,9 @@ rm -rf $RPM_BUILD_ROOT
 %files tk -f files.tk
 
 %changelog
+* Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 1.1.6-4
+- rebuild for new F11 features
+
 * Sun Sep 28 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info - 1.1.6-3
 - add _default_patch_fuzz 2
 - remove || : after check
